@@ -1,12 +1,12 @@
 package com.finantx.recon.dto;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.Instant;
 
 public record TransactionView(
         String txId,
         BigDecimal amount,
-        LocalDate date,
+        Instant date,
         String fromAccount,
         String toAccount,
         String merchant,

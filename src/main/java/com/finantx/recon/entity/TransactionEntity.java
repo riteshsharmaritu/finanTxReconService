@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.Instant;
 
 @Entity
 @Table(name = "transactions")
@@ -24,8 +24,8 @@ public class TransactionEntity {
     @Column(nullable = false, precision = 19, scale = 4)
     private BigDecimal amount;
 
-    @Column(name = "txn_date", nullable = false)
-    private LocalDate date;
+    @Column(name = "txn_timestamp", nullable = false)
+    private Instant date;
 
     @Column(nullable = false)
     private String fromAccount;
@@ -35,7 +35,7 @@ public class TransactionEntity {
 
     private String merchant;
 
-    @Column(nullable = false, unique = true)
+    @Column(unique = true)
     private String idempotencyKey;
 
     private boolean anomaly;
@@ -64,11 +64,11 @@ public class TransactionEntity {
         this.amount = amount;
     }
 
-    public LocalDate getDate() {
+    public Instant getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(Instant date) {
         this.date = date;
     }
 

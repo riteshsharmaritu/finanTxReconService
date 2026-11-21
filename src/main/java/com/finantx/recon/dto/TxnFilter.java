@@ -1,14 +1,14 @@
 package com.finantx.recon.dto;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
+import java.time.Instant;
 
 public record TxnFilter(
         String account,
         BigDecimal fromAmount,
         BigDecimal toAmount,
-        LocalDate fromDate,
-        LocalDate toDate,
+        Instant fromDate,
+        Instant toDate,
         String merchant
 ) {
 }

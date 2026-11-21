@@ -1,3 +1,20 @@
 {
-  "rules": []
+  "rules": [
+    {
+      "id": "HIGH_AMOUNT",
+      "type": "AMOUNT_THRESHOLD",
+      "enabled": true,
+      "description": "Transaction amount is more than $5000",
+      "thresholdAmount": 5000
+    },
+    {
+      "id": "HIGH_FREQUENCY_SAME_PAYEE",
+      "type": "PAYEE_FREQUENCY",
+      "enabled": true,
+      "description": "More than 5 payments to the same toAccount or merchant in the last 24 hours",
+      "groupBy": ["TO_ACCOUNT", "MERCHANT"],
+      "maxCount": 5,
+      "windowHours": 24
+    }
+  ]
 }
