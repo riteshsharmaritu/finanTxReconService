@@ -1,0 +1,31 @@
+{
+  "transactions": [
+    {
+      "txId": "tx-1001",
+      "amount": 125.50,
+      "date": "2026-11-20T19:30:00Z",
+      "fromAccount": "ACC-FROM",
+      "toAccount": "ACC-TO",
+      "merchant": "Amazon",
+      "idempotencyKey": "idem-1001"
+    },
+    {
+      "txId": "tx-1002",
+      "amount": 5200.00,
+      "date": "2026-11-20T19:35:00Z",
+      "fromAccount": "ACC-FROM",
+      "toAccount": "ACC-PAYEE",
+      "merchant": "WireTransfer",
+      "idempotencyKey": "idem-1002"
+    },
+    {
+      "txId": "tx-1003",
+      "amount": 50.00,
+      "date": "2026-11-20T19:40:00Z",
+      "fromAccount": "ACC-FROM",
+      "toAccount": "ACC-TO",
+      "merchant": "Amazon",
+      "idempotencyKey": "idem-1003"
+    }
+  ]
+}
